@@ -1,0 +1,125 @@
+@import '../../scss/colors';
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.btn:hover:not(.disabled) {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn:active {
+  border: 1px solid $borderColor;
+}
+
+.btn-number, .btn-dot {
+  background-color: $bgColorBtnPrimary;
+}
+
+.btn-1 {
+  grid-area: btn-1;
+}
+
+.btn-2 {
+  grid-area: btn-2;
+}
+
+.btn-3 {
+  grid-area: btn-3;
+}
+
+.btn-4 {
+  grid-area: btn-4;
+}
+
+.btn-5 {
+  grid-area: btn-5;
+}
+
+.btn-6 {
+  grid-area: btn-6;
+}
+
+.btn-7 {
+  grid-area: btn-7;
+}
+
+.btn-8 {
+  grid-area: btn-8;
+}
+
+.btn-9 {
+  grid-area: btn-9;
+}
+
+.btn-0 {
+  grid-area: btn-0;
+}
+
+.btn-dot {
+  grid-area: btn-dot;
+  font-weight: 900;
+}
+
+.btn-equal {
+  grid-area: btn-equal;
+  background-color: $bgColorBtnEqual;
+  color: $textColorBtnEqual;
+}
+
+.btn-save {
+  grid-area: btn-save;
+}
+
+.btn-load {
+  grid-area: btn-load;
+}
+
+.btn-division {
+  grid-area: btn-division;
+}
+
+.btn-multiply {
+  grid-area: btn-multiply;
+}
+
+.btn-minus {
+  grid-area: btn-minus;
+}
+
+.btn-plus {
+  grid-area: btn-plus;
+}
+
+.btn-clear {
+  grid-area: btn-clear;
+}
+
+.btn:not(.btn-equal) {
+  color: $textColorPrimary;
+}
+
+.btn-plus,
+.btn-minus,
+.btn-division,
+.btn-multiply,
+.btn-save,
+.btn-load {
+  background-color: $bgColorBtnSecondary;
+}
+
+.btn-clear {
+  background-color: $bgClearBtn;
+}
+.btn-clear,
+.btn-load,
+.btn-save {
+  text-transform: uppercase;
+}
+
+.disabled {
+  background-color: $bgColorBtnDisabled;
+}

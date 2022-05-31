@@ -1,0 +1,48 @@
+@import '../../scss/colors';
+@import '../../scss/variables';
+
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .message-ctn {
+    min-width: $width;
+    height: 5rem;
+    background-color: $bgColorBtnDisabled;
+    margin-top: 8rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .closeIcon {
+    align-self: flex-start;
+    margin: .5rem .5rem .5rem auto;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $bgColorBtnPrimary;
+      border-radius: 20px;
+      color: $bgColorBtnPrimary;
+    }
+  }
+}
+
+.error {
+  color: $textColorError
+}
+
+.succeeded {
+  color: $textColorSucced;
+}
+
+.general {
+  color: $textColorDisplayCurrent;
+  margin: auto 0 auto 0;
+}
