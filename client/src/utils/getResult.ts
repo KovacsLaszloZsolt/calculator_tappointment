@@ -7,12 +7,14 @@ const getResult = (calcState: CalcState): CalcState => {
   const currentNum = parseFloat(calcState.currentValue);
 
   if (calcState.secondOperation) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const partialResult = fulfillOperation(calcState.secondNum!, currentNum, calcState.secondOperation);
 
     if (partialResult === 'Error') {
       return onError;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const result = fulfillOperation(calcState.firstNum!, partialResult, calcState.firstOperation);
 
     return {
@@ -27,6 +29,7 @@ const getResult = (calcState: CalcState): CalcState => {
   }
 
   if (calcState.firstOperation) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const result = fulfillOperation(calcState.firstNum!, currentNum, calcState.firstOperation);
 
     return {

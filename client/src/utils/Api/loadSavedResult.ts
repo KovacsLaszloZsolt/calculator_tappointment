@@ -1,11 +1,12 @@
-import { CalcState, ModalMessage, MODALTYPE } from '../../interfaces';
+import { ModalMessage, MODALTYPE } from '../../interfaces';
+import baseUrl from './baseUrl';
 
 type ErrorObj = {
   error: string;
 };
 const loadSavedResult = async (): Promise<number | ModalMessage> => {
   try {
-    const res = await fetch('http://localhost:3000/load');
+    const res = await fetch(`${baseUrl}/load`);
     const savedResult = (await res.json()) as number | ErrorObj;
 
     if (res.ok) {
